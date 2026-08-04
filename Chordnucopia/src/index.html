@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Chord Generator</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <div class="main-panel">
+            <div class="settings-bar">
+                <div class="settings-row">
+                    <span>Notes:</span>
+                    <input type="number" id="inputNotes" value="3" min="1" max="12">
+                </div>
+                <div class="settings-row">
+                    <span>Delay:</span>
+                    <input type="number" id="inputDelay" value="150" min="10" max="250" step="10">
+                    <span>ms</span>
+                </div>
+            </div>
+
+            <div class="note-picker">
+                <select id="selectStartNote" title="Select Starting Note">
+                    <option value="C" selected>C</option>
+                    <option value="C#">C#</option>
+                    <option value="D">D</option>
+                    <option value="D#">D#</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="F#">F#</option>
+                    <option value="G">G</option>
+                    <option value="G#">G#</option>
+                    <option value="A">A</option>
+                    <option value="A#">A#</option>
+                    <option value="B">B</option>
+                </select>
+
+                <select id="selectOctave" title="Select Octave">
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected>5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+            </div>
+
+            <button class="generate-btn" id="generateBtn" onclick="generate_chord()">Generate Chord</button>
+        </div>
+
+        <div id="history-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
